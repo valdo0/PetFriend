@@ -19,7 +19,7 @@ animals
           </View>
         )}
         onSwiped={(index) => console.log('Swiped card index:', index)}
-        onSwipedAll={() => console.log('No more cards to swipe')}
+        onSwipedAll={() => console.log('No mas cartas')}
         cardIndex={0}
         backgroundColor={'white'}
         stackSize={3}
