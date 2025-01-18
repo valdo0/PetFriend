@@ -5,7 +5,7 @@ import Swiper from 'react-native-deck-swiper';
 import animals from '../data/animals';
 const HomeScreen: React.FC = () => {
   const [cards] = useState(
-animals
+    animals
   );
 
   return (
@@ -15,7 +15,7 @@ animals
         renderCard={(card) => (
           <View style={styles.card}>
             <Image source={{ uri: card.image }} style={styles.cardImage} />
-            <Text>{card.name}</Text>
+            <Text style={styles.cardText}>{card.name}</Text>
           </View>
         )}
         onSwiped={(index) => console.log('Swiped card index:', index)}
@@ -37,22 +37,34 @@ const styles = StyleSheet.create({
   },
   card: {
     flex: 0.8,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.2,
     shadowRadius: 20,
-    elevation: 5,
   },
   cardImage: {
-    width: 200,
-    height: 200,
+    width: '100%',
+    height: '100%',
     borderRadius: 10,
+    resizeMode: 'cover',
+  },
+  cardText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    position: 'absolute',
+    bottom: 10,
+    left: 15,
+    right: 15,
+    padding: 10,
+    color: 'black',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    borderRadius: 10,
+    textAlign: 'left',
   },
 });
-
 export default HomeScreen;
 

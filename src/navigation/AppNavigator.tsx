@@ -1,7 +1,7 @@
 // AppNavigator.tsx
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
@@ -10,7 +10,6 @@ const Tab = createBottomTabNavigator();
 
 const AppNavigator: React.FC = () => {
   const handleNotificationPress = () => {
-    // Lógica para manejar la notificación (por ejemplo, abrir una pantalla de notificaciones)
     console.log('Notificaciones presionadas');
   };
 
@@ -37,16 +36,16 @@ const AppNavigator: React.FC = () => {
           </TouchableOpacity>
         ),
         headerRight: () => (
-          <TouchableOpacity onPress={handleNotificationPress} style={{ marginRight: 10 ,backgroundColor:'black'}}>
-            <Ionicons name="notifications-outline" style={{fontSize: 30 ,height: 40, width: 40 }} color={'white'} />
+          <TouchableOpacity onPress={handleNotificationPress} style={{ marginRight: 10 }}>
+            <FontAwesome6 name="bell" style={{fontSize: 30 ,height: 40, width: 40 }} color={'black'} />
           </TouchableOpacity>
         ),
         tabBarIcon: ({ color, size }) => {
           const icons: Record<string, string> = {
-            Home: 'paw',
+            Home: 'house',
             Profile: 'person',
           };
-          return <Ionicons name={icons['Home']} size={size} color={color} />;
+          return <FontAwesome6 name={icons['Home']} size={size} color={color} />;
         },
         tabBarActiveTintColor: 'green',
         tabBarInactiveTintColor: 'gray',

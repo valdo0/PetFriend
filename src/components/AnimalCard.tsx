@@ -9,7 +9,7 @@ interface AnimalCardProps {
 const AnimalCard: React.FC<AnimalCardProps> = ({ name, image }) => {
   return (
     <View style={styles.card}>
-      <Image source={{ uri: image }} style={styles.image} />
+      <Image source={{ uri: image }}  height={800} width={800}/>
       <Text style={styles.name}>{name}</Text>
     </View>
   );
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     overflow: 'hidden',
     margin: 10,
-    height: 300,
+    height: 800,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000',
@@ -29,11 +29,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 4,
     elevation: 5,
-  },
-  image: {
-    width: 250,
-    height: 250,
-    borderRadius: 10,
   },
   name: {
     marginTop: 10,
