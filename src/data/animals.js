@@ -18,4 +18,3 @@ export default [
       description: 'Un perro guardián leal y valiente.',
     },
   ];
-  
