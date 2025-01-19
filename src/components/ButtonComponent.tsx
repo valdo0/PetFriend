@@ -1,4 +1,3 @@
-// src/components/ButtonComponent.tsx
 import React from 'react';
 import { View, Pressable, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
